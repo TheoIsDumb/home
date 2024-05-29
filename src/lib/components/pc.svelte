@@ -7,8 +7,6 @@ Command: npx @threlte/gltf@2.0.3 pc.glb -s
   import { Group } from 'three'
   import { T, forwardEventHandlers } from '@threlte/core'
   import { useGltf } from '@threlte/extras'
-  import { interactivity } from '@threlte/extras'
-  interactivity()
 
   export const ref = new Group()
 
@@ -21,13 +19,13 @@ Command: npx @threlte/gltf@2.0.3 pc.glb -s
   {#await gltf}
     <slot name="fallback" />
   {:then gltf}
-    <T.PointLight intensity={1000} decay={2} position={[-7.98, 13.24, 0.88]} rotation={[-Math.PI / 2, 0, 0]} />
+    <T.PointLight intensity={1000} decay={2} position={[-3.64, 13.24, 0.88]} rotation={[-Math.PI / 2, 0, 0]} />
     <T.Mesh
       castShadow
       receiveShadow
       geometry={gltf.nodes.bottombox.geometry}
       material={gltf.nodes.bottombox.material}
-      position={[-0.99, 0.89, 1.85]}
+      position={[3.35, 0.89, 1.85]}
       scale={0.42}
     />
     <T.Mesh
@@ -35,7 +33,7 @@ Command: npx @threlte/gltf@2.0.3 pc.glb -s
       receiveShadow
       geometry={gltf.nodes.laptop.geometry}
       material={gltf.materials['Material.003']}
-      position={[-5.64, 0.44, -0.15]}
+      position={[-1.3, 0.44, -0.15]}
       rotation={[0, 0, 0.03]}
       scale={3.06}
     />
@@ -44,7 +42,7 @@ Command: npx @threlte/gltf@2.0.3 pc.glb -s
       receiveShadow
       geometry={gltf.nodes.ground.geometry}
       material={gltf.materials['Material.004']}
-      position={[-4.22, -5.56, 0.59]}
+      position={[0.12, -5.56, 0.59]}
       scale={11.59}
     />
     <T.Mesh
@@ -52,7 +50,7 @@ Command: npx @threlte/gltf@2.0.3 pc.glb -s
       receiveShadow
       geometry={gltf.nodes.tabletop.geometry}
       material={gltf.materials.Material}
-      position={[-4.17, 0.32, -0.53]}
+      position={[0.17, 0.32, -0.53]}
       scale={6.21}
     />
     <T.Mesh
@@ -60,9 +58,9 @@ Command: npx @threlte/gltf@2.0.3 pc.glb -s
       receiveShadow
       geometry={gltf.nodes.legs.geometry}
       material={gltf.materials.Material}
-      position={[-8.53, -0.84, 4.36]}
+      position={[-4.19, -0.84, 4.36]}
     />
-    <T.Group position={[-0.32, 7.15, -3.27]} rotation={[0, 0, -Math.PI / 2]} scale={-3.31}>
+    <T.Group position={[4.01, 7.15, -3.27]} rotation={[0, 0, -Math.PI / 2]} scale={-3.31}>
       <T.Mesh castShadow receiveShadow geometry={gltf.nodes.Plane.geometry} material={gltf.materials['Material.001']} />
       <T.Mesh
         castShadow
@@ -76,14 +74,14 @@ Command: npx @threlte/gltf@2.0.3 pc.glb -s
       receiveShadow
       geometry={gltf.nodes.spine.geometry}
       material={gltf.materials['Material.001']}
-      position={[1.35, 4.91, -4.9]}
+      position={[5.69, 4.91, -4.9]}
     />
     <T.Mesh
       castShadow
       receiveShadow
       geometry={gltf.nodes.base.geometry}
       material={gltf.materials['Material.001']}
-      position={[0.12, 1.41, -0.18]}
+      position={[4.46, 1.41, -0.18]}
       scale={1.65}
     />
   {:catch error}
