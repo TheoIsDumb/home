@@ -10,15 +10,11 @@ Command: npx @threlte/gltf@2.0.3 pc.glb -s
   import { interactivity } from '@threlte/extras'
   interactivity()
 
-  import { orbitRotate } from '$lib/store'
-
   export const ref = new Group()
 
   const gltf = useGltf('/pc.glb')
 
   const component = forwardEventHandlers()
-
-  $: console.log($orbitRotate)
 </script>
 
 <T is={ref} dispose={false} {...$$restProps} bind:this={$component}>
@@ -73,7 +69,6 @@ Command: npx @threlte/gltf@2.0.3 pc.glb -s
         receiveShadow
         geometry={gltf.nodes.Plane_1.geometry}
         material={gltf.materials['Material.002']}
-        on:click={() => $orbitRotate = !$orbitRotate}
       />
     </T.Group>
     <T.Mesh

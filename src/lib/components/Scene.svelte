@@ -1,9 +1,12 @@
 <script>
-	import { T } from '@threlte/core'
+	import { T, useTask } from '@threlte/core'
 	import { OrbitControls } from '@threlte/extras'
 	import PC from './pc.svelte'
 
-	import { orbitRotate } from '$lib/store'
+	let rotation = 0
+	useTask((delta) => {
+		rotation += delta / 5
+	})
 </script>
 
 <T.PerspectiveCamera
@@ -13,7 +16,7 @@
 	>
   <OrbitControls
 		enableDamping
-		autoRotate={$orbitRotate}
+		autoRotate={false}
 		minDistance={40}
 		maxDistance={100}
 	/>
@@ -21,4 +24,4 @@
 
 <T.AmbientLight color="gainsboro" intensity={2}/>
 
-<PC />
+<PC rotation.y={rotation} />
