@@ -7,6 +7,7 @@
 <T.PerspectiveCamera
   makeDefault
 	position={[-25, 25, 45]}
+	fov={35}
 	>
   <OrbitControls
 		enableDamping
@@ -16,7 +17,7 @@
 	/>
 </T.PerspectiveCamera>
 
-<T.DirectionalLight color="white" intensity={5} position={[10, 20, 20]}/>
+<T.DirectionalLight color="white" intensity={5} position={[10, 20, 0]}/>
 <T.AmbientLight color="gainsboro" intensity={2}/>
 
 {#await useGltf('/pc.glb') then gltf}
