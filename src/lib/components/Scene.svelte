@@ -1,7 +1,9 @@
 <script>
-  import { T, useTask } from '@threlte/core'
-  import { OrbitControls } from '@threlte/extras'
-	import { useGltf } from '@threlte/extras'
+	import { T } from '@threlte/core'
+	import { OrbitControls } from '@threlte/extras'
+	import PC from './pc.svelte'
+
+	import { orbitRotate } from '$lib/store'
 </script>
 
 <T.PerspectiveCamera
@@ -11,20 +13,12 @@
 	>
   <OrbitControls
 		enableDamping
-		autoRotate={true}
-		minDistance={50}
+		autoRotate={$orbitRotate}
+		minDistance={40}
 		maxDistance={100}
 	/>
 </T.PerspectiveCamera>
 
-<T.DirectionalLight color="white" intensity={5} position={[10, 20, 0]}/>
 <T.AmbientLight color="gainsboro" intensity={2}/>
 
-{#await useGltf('/pc.glb') then gltf}
-  <T is={gltf.scene}
-		position={[0, 0, 0]}
-		castShadow
-		receiveShadow
-		
-	/>
-{/await}
+<PC />
