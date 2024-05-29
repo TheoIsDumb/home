@@ -48,6 +48,14 @@ Command: npx @threlte/gltf@2.0.3 pc.glb -s
     <T.Mesh
       castShadow
       receiveShadow
+      geometry={gltf.nodes.cross.geometry}
+      material={gltf.materials['Material.005']}
+      position={[5.92, 1.15, 4.97]}
+      scale={0.57}
+    />
+    <T.Mesh
+      castShadow
+      receiveShadow
       geometry={gltf.nodes.tabletop.geometry}
       material={gltf.materials.Material}
       position={[0.17, 0.32, -0.53]}
