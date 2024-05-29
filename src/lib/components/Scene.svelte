@@ -1,6 +1,7 @@
 <script>
 	import { T, useTask } from '@threlte/core'
 	import { OrbitControls } from '@threlte/extras'
+	import { Sky } from '@threlte/extras'
 	import PC from './pc.svelte'
 
 	let rotation = 0
@@ -9,10 +10,12 @@
 	})
 </script>
 
+<Sky elevation={1.45} rayleigh={3} exposure={0.3} turbidity={10} azimuth={0} />
+
 <T.PerspectiveCamera
   makeDefault
-	position={[-25, 15, 45]}
-	fov={35}
+	position={[-25, 2, 55]}
+	fov={50}
 	>
   <OrbitControls
 		enableDamping
@@ -21,7 +24,5 @@
 		maxDistance={100}
 	/>
 </T.PerspectiveCamera>
-
-<T.AmbientLight color="gainsboro" intensity={2}/>
 
 <PC rotation.y={rotation} />
