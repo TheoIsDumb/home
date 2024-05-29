@@ -6,7 +6,7 @@
 
 <T.PerspectiveCamera
   makeDefault
-	position={[-25, 25, 45]}
+	position={[-25, 15, 45]}
 	fov={35}
 	>
   <OrbitControls
@@ -25,5 +25,6 @@
 		position={[0, 0, 0]}
 		castShadow
 		receiveShadow
+		
 	/>
 {/await}
