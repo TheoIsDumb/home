@@ -6,12 +6,11 @@ Command: npx @threlte/gltf@2.0.3 pc.glb -s
 <script>
   import { Group } from 'three'
   import { T, forwardEventHandlers } from '@threlte/core'
-  import { useGltf, useGltfAnimations } from '@threlte/extras'
+  import { useGltf } from '@threlte/extras'
 
   export const ref = new Group()
 
   const gltf = useGltf('/pc.glb')
-  export const { actions, mixer } = useGltfAnimations(gltf, ref)
 
   const component = forwardEventHandlers()
 </script>
@@ -20,136 +19,79 @@ Command: npx @threlte/gltf@2.0.3 pc.glb -s
   {#await gltf}
     <slot name="fallback" />
   {:then gltf}
-    <T.Group name="Scene">
-      <T.PointLight
-        name="Point"
-        intensity={1087.03}
-        decay={2}
-        position={[-3.64, 13.24, 0.88]}
-        rotation={[-Math.PI / 2, 0, 0]}
-      />
-      <T.PointLight
-        name="Point001_1"
-        intensity={271.76}
-        decay={2}
-        position={[-23.31, -6.13, -0.22]}
-        rotation={[-Math.PI / 2, -0.07, 0]}
-      />
+    <T.PointLight intensity={1087.03} decay={2} position={[-3.64, 13.24, 0.88]} rotation={[-Math.PI / 2, 0, 0]} />
+    <T.Mesh
+      castShadow
+      receiveShadow
+      geometry={gltf.nodes.bottombox.geometry}
+      material={gltf.nodes.bottombox.material}
+      position={[3.35, 0.89, 1.85]}
+      scale={0.42}
+    />
+    <T.Mesh
+      castShadow
+      receiveShadow
+      geometry={gltf.nodes.laptop.geometry}
+      material={gltf.materials['Material.003']}
+      position={[-1.3, 0.44, -0.15]}
+      rotation={[0, 0, 0.03]}
+      scale={3.06}
+    />
+    <T.Mesh
+      castShadow
+      receiveShadow
+      geometry={gltf.nodes.ground.geometry}
+      material={gltf.materials['Material.004']}
+      position={[0.12, -5.56, 0.59]}
+      scale={11.59}
+    />
+    <T.Mesh
+      castShadow
+      receiveShadow
+      geometry={gltf.nodes.cross.geometry}
+      material={gltf.materials['Material.005']}
+      position={[5.92, 1.15, 4.97]}
+      scale={0.57}
+    />
+    <T.Mesh
+      castShadow
+      receiveShadow
+      geometry={gltf.nodes.tabletop.geometry}
+      material={gltf.materials.Material}
+      position={[0.17, 0.32, -0.53]}
+      scale={6.21}
+    />
+    <T.Mesh
+      castShadow
+      receiveShadow
+      geometry={gltf.nodes.legs.geometry}
+      material={gltf.materials.Material}
+      position={[-4.19, -0.84, 4.36]}
+    />
+    <T.Group position={[4.01, 7.15, -3.27]} rotation={[0, 0, -Math.PI / 2]} scale={-3.31}>
+      <T.Mesh castShadow receiveShadow geometry={gltf.nodes.Plane.geometry} material={gltf.materials['Material.001']} />
       <T.Mesh
-        name="bottombox"
         castShadow
         receiveShadow
-        geometry={gltf.nodes.bottombox.geometry}
-        material={gltf.nodes.bottombox.material}
-        position={[3.35, 0.89, 1.85]}
-        scale={0.42}
-      />
-      <T.Mesh
-        name="laptop"
-        castShadow
-        receiveShadow
-        geometry={gltf.nodes.laptop.geometry}
-        material={gltf.materials['Material.003']}
-        position={[-1.3, 0.44, -0.15]}
-        rotation={[0, 0, 0.03]}
-        scale={3.06}
-      />
-      <T.Mesh
-        name="ground"
-        castShadow
-        receiveShadow
-        geometry={gltf.nodes.ground.geometry}
-        material={gltf.materials['Material.004']}
-        position={[0.12, -5.56, 0.59]}
-        scale={11.59}
-      />
-      <T.Mesh
-        name="cross"
-        castShadow
-        receiveShadow
-        geometry={gltf.nodes.cross.geometry}
-        material={gltf.materials['Material.005']}
-        position={[5.92, 1.15, 4.97]}
-        scale={0.57}
-      />
-      <T.Mesh
-        name="tabletop"
-        castShadow
-        receiveShadow
-        geometry={gltf.nodes.tabletop.geometry}
-        material={gltf.materials.Material}
-        position={[0.17, 0.32, -0.53]}
-        scale={6.21}
-      />
-      <T.Mesh
-        name="legs"
-        castShadow
-        receiveShadow
-        geometry={gltf.nodes.legs.geometry}
-        material={gltf.materials.Material}
-        position={[-4.19, -0.84, 4.36]}
-      />
-      <T.Group name="screen" position={[4.01, 7.15, -3.27]} rotation={[0, 0, -Math.PI / 2]} scale={-3.31}>
-        <T.Mesh
-          name="Plane"
-          castShadow
-          receiveShadow
-          geometry={gltf.nodes.Plane.geometry}
-          material={gltf.materials['Material.001']}
-        />
-        <T.Mesh
-          name="Plane_1"
-          castShadow
-          receiveShadow
-          geometry={gltf.nodes.Plane_1.geometry}
-          material={gltf.materials['Material.002']}
-        />
-      </T.Group>
-      <T.Mesh
-        name="spine"
-        castShadow
-        receiveShadow
-        geometry={gltf.nodes.spine.geometry}
-        material={gltf.materials['Material.001']}
-        position={[5.69, 4.91, -4.9]}
-      />
-      <T.Mesh
-        name="base"
-        castShadow
-        receiveShadow
-        geometry={gltf.nodes.base.geometry}
-        material={gltf.materials['Material.001']}
-        position={[4.46, 1.41, -0.18]}
-        scale={1.65}
-      />
-      <T.Mesh
-        name="Cube"
-        castShadow
-        receiveShadow
-        geometry={gltf.nodes.Cube.geometry}
-        material={gltf.materials['Material.006']}
-        position={[-14.71, -6.02, -6.77]}
-        rotation={[0, 0, -0.21]}
-      />
-      <T.Mesh
-        name="Cube001"
-        castShadow
-        receiveShadow
-        geometry={gltf.nodes.Cube001.geometry}
-        material={gltf.materials['Material.006']}
-        position={[-14.71, -6.02, -1.07]}
-        rotation={[0, 0, -0.21]}
-      />
-      <T.Mesh
-        name="Cube002"
-        castShadow
-        receiveShadow
-        geometry={gltf.nodes.Cube002.geometry}
-        material={gltf.materials['Material.006']}
-        position={[-14.71, -6.02, 4.93]}
-        rotation={[0, 0, -0.21]}
+        geometry={gltf.nodes.Plane_1.geometry}
+        material={gltf.materials['Material.002']}
       />
     </T.Group>
+    <T.Mesh
+      castShadow
+      receiveShadow
+      geometry={gltf.nodes.spine.geometry}
+      material={gltf.materials['Material.001']}
+      position={[5.69, 4.91, -4.9]}
+    />
+    <T.Mesh
+      castShadow
+      receiveShadow
+      geometry={gltf.nodes.base.geometry}
+      material={gltf.materials['Material.001']}
+      position={[4.46, 1.41, -0.18]}
+      scale={1.65}
+    />
   {:catch error}
     <slot name="error" {error} />
   {/await}

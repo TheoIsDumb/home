@@ -14,7 +14,7 @@
 	intensity={0.2}
 />
 
-<T.PerspectiveCamera makeDefault position={[-25, 10, 55]} fov={50}>
+<T.PerspectiveCamera makeDefault position={[-25, 10, 55]} fov={70}>
 	<OrbitControls
 		enableDamping
 		autoRotate={true}
