@@ -12,16 +12,18 @@
 
 <slot></slot>
 
-<div class="panel w-full fixed bottom-2 flex justify-between px-2">
-  <div class="{paneClass} px-2 py-1 font-bold text-xs xl:text-base flex items-center justify-center">
-    theo.
+<div class="panel z-20 w-full fixed bottom-2 flex justify-between px-2">
+  <div class="{paneClass} px-2 py-1 font-bold text-base flex items-center justify-center">
+    <a href="/">
+      theo.
+    </a>
   </div>
 
   <div class="{paneClass} flex gap-2 items-center justify-center
   px-2 py-1">
     {#each links as link}
       <a href={link.toLowerCase()}
-      class="text-xs xl:text-base border-r border-black last:border-r-0 pr-2 last:pr-0">
+      class="text-base border-r border-black last:border-r-0 pr-2 last:pr-0">
       {link}</a>
     {/each}
   </div>
