@@ -32,7 +32,7 @@
     {#each links as link}
       <a href={link.toLowerCase()}
       class="text-base border-r border-black last:border-r-0 pr-2 last:pr-0">
-        {link}
+        {link.toLowerCase()}
       </a>
     {/each}
   </div>
