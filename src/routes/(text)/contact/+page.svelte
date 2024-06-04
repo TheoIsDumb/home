@@ -4,7 +4,7 @@
 
 <Heading title="Contact"/>
 
-<div class="mt-8">
+<div class="mt-4">
     <p>
         <span class="font-bold">Email: </span>
         theophinetheodore [at] gmail [dot] com

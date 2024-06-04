@@ -2,7 +2,7 @@
   import "../app.css";
   import App from '$lib/components/App.svelte'
 
-  const paneClass = "bg-white/50 rounded-md shadow-md"
+  const paneClass = "bg-white/50 rounded-md shadow-md backdrop-blur"
   const links = ["Projects", "Contact", "About"]
 </script>
 
