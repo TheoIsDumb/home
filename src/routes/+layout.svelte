@@ -2,9 +2,17 @@
   import "../app.css";
   import App from '$lib/components/App.svelte'
 
+  import { page } from '$app/stores'
+
   const paneClass = "bg-white/50 rounded-md shadow-md backdrop-blur"
   const links = ["Projects", "Contact", "About"]
 </script>
+
+<svelte:head>
+  <title>
+    {$page.url.pathname === "/" ? 'theo.' : $page.url.pathname.replace('/', '') + ' | theo.' }
+  </title>
+</svelte:head>
 
 <main class="h-dvh w-dvw">
   <App />
