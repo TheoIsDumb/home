@@ -48,7 +48,7 @@
 <div class="grid md:grid-cols-2 gap-2 mt-4">
     {#each projects as proj}
         <div class="card rounded-lg bg-neutral-900 shadow-md">
-            <img src="/projects/{proj.name.toLowerCase()}.webp"
+            <img loading="lazy" src="/projects/{proj.name.toLowerCase()}.webp"
             class="rounded-t-md"
             alt="Screenshot of {proj.name}">
 
