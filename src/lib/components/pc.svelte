@@ -42,7 +42,7 @@ Command: npx @threlte/gltf@2.0.3 pc.glb -s
       receiveShadow
       geometry={gltf.nodes.ground.geometry}
       material={gltf.materials['Material.004']}
-      position={[0.12, -5.56, 0.59]}
+      position={[0.12, -5.56, -0.23]}
       scale={11.59}
     />
     <T.Mesh
