@@ -4,7 +4,7 @@
   const projects = [
     {
       name: "Home",
-      desc: "This website.",
+      desc: "This website. Made with Threlte.",
       link: "https://theo.vkdbois.xyz",
       github: "https://github.com/TheoIsDumb/home",
     },
