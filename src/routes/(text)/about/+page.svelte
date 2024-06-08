@@ -1,5 +1,6 @@
 <script>
   import Heading from "$lib/components/Heading.svelte";
+  import { icons } from "$lib/icons";
 
   const links = [
     {
@@ -20,7 +21,7 @@
 <div class="space-y-4">
   <Heading title="About" />
 
-  <p>Hi, I am Theo and I build stuff.</p>
+  <p>Hi, I am Theo and I like customizing stuff.</p>
 
   <p>
     I dabble with Svelte and JS on an almost daily basis. And I like drawing
@@ -40,10 +41,24 @@
       </li>
     {/each}
   </ul>
+
+  <h2 class="font-bold text-xl">Tools I Use</h2>
+
+  <div class="flex flex-wrap gap-4">
+    {#each icons as icon}
+      <div class="flex flex-col gap-2 items-center">
+        <span class="hover:scale-110">{@html icon.svg}</span>
+        <span class="font-bold text-xs">{icon.title}</span>
+      </div>
+    {/each}
+  </div>
 </div>
 
 <style>
   a {
     @apply underline;
+  }
+  :global(svg.icon) {
+    @apply size-10;
   }
 </style>
