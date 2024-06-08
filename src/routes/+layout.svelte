@@ -48,7 +48,7 @@
 <style>
   :global(body) {
     margin: 0;
-		font-family: "Gitlab Sans", sans-serif;
+		font-family: "Geist", sans-serif;
 		font-weight: 400;
   }
 </style>

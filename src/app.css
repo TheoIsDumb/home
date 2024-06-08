@@ -3,11 +3,6 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Gitlab Sans";
-    src: url("/fonts/gitlab-sans/GitLabSans.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Gitlab Sans Italic";
-    src: url("/fonts/gitlab-sans/GitLabSans-Italic.woff2") format("woff2");
+    font-family: "Geist";
+    src: url("/fonts/GeistVF.woff2") format("woff2");
 }
