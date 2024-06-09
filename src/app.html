@@ -1,12 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover" class="bg-neutral-200 tracking-tight">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="darkreader-lock" />
+
+    <meta name="title" content="theo's home." />
+    <meta name="author" content="vkdbois.xyz" />
+    <meta name="description" content="Powered by Threlte." />
+    <meta name="”robots”" content="index, follow" />
+
+    <meta property="og:url" content="https://home.vkdbois.xyz/" />
+    <meta property="og:image" content="/og.png" />
+    <meta property="og:title" content="theo's home." />
+    <meta property="og:description" content="Powered by Threlte." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="theo's home." />
+    <meta name="twitter:description" content="Powered by Threlte." />
+    <meta name="twitter:image" content="/og.png" />
+    %sveltekit.head%
+  </head>
+
+  <body
+    data-sveltekit-preload-data="hover"
+    class="bg-neutral-200 tracking-tight"
+  >
+    <div style="display: contents">%sveltekit.body%</div>
+  </body>
 </html>
