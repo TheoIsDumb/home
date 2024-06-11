@@ -1,13 +1,18 @@
-`bun run dev` for local prod
+# home
 
-models are inside static
+![screenshot](/static/projects/home.webp)
 
-threejs related files are in src/lib/components
+made with [threlte](https://threlte.xyz) & [svelteKit](https://kit.svelte.dev).
 
-App.svelte and Scene.svelte
+inspired by [henryheffernan.com](https://henryheffernan.com).
 
-Scene.svelte contains the camera, lights and GLTF
+## instructions
 
-if you want the .blend file to open in blender, its in static/
+```bash
+$ bun run dev # local prod
+```
 
-static/sth.blend
+## notes
+
+- GLB model & blender file are inside `static`
+- threlte files are in `src/lib/components` (`App.svelte` & `Scene.svelte`)
