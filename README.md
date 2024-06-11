@@ -2,7 +2,7 @@
 
 ![screenshot](/static/projects/home.webp)
 
-made with [threlte](https://threlte.xyz) & [svelteKit](https://kit.svelte.dev).
+made with [threlte](https://threlte.xyz), [sveltekit](https://kit.svelte.dev) and [blender](https://blender.org).
 
 inspired by [henryheffernan.com](https://henryheffernan.com).
 
