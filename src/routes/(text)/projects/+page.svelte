@@ -21,6 +21,12 @@
       github: "https://github.com/TheoIsDumb/TheoOS",
     },
     {
+      name: "Funkwest",
+      desc: "A font I made for fun.",
+      link: "https://funkwest-web.vercel.app",
+      github: "https://github.com/TheoIsDumb/funkwest",
+    },
+    {
       name: "stition.ai",
       desc: "Homepage of stition.ai.",
       link: "https://stition.ai",
