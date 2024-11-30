@@ -5,12 +5,12 @@
     {
       name: "Home",
       desc: "This website. Made with Threlte.",
-      link: "https://theo.vkdbois.xyz",
+      link: "https://home.vkdbois.xyz",
       github: "https://github.com/TheoIsDumb/home",
     },
     {
       name: "Raga",
-      desc: "A libre music frontend powered by SvelteKit.",
+      desc: "[INACTIVE] A libre music frontend powered by SvelteKit.",
       link: "https://raga.vkdbois.xyz",
       github: "https://github.com/TheoIsDumb/raga",
     },
@@ -27,9 +27,29 @@
       github: "https://github.com/TheoIsDumb/funkwest",
     },
     {
+      name: "Codex",
+      desc: "A system info utility for Linux.",
+      github: "https://github.com/TheoIsDumb/codex",
+    },
+    {
+      name: "launch2",
+      desc: "A theme for the Bridge Android Launcher, made with web technologies..",
+      github: "https://github.com/TheoIsDumb/launch2",
+    },
+    {
+      name: "Codex",
+      desc: "A system info utility for Linux.",
+      github: "https://github.com/TheoIsDumb/codex",
+    },
+    {
       name: "stition.ai",
       desc: "Homepage of stition.ai.",
       link: "https://stition.ai",
+    },
+    {
+      name: "Hypx",
+      desc: "Homepage of hypx.in.",
+      link: "https://hypx.in",
     },
     {
       name: "vettucaudchurch.com",
