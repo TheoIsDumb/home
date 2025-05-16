@@ -37,9 +37,9 @@
       github: "https://github.com/TheoIsDumb/launch2",
     },
     {
-      name: "Codex",
-      desc: "A system info utility for Linux.",
-      github: "https://github.com/TheoIsDumb/codex",
+      name: "Halo",
+      desc: "A JioSaavn frontend made with Tkinter.",
+      github: "https://github.com/TheoIsDumb/halo",
     },
     {
       name: "stition.ai",
