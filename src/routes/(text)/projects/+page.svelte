@@ -32,6 +32,11 @@
       github: "https://github.com/TheoIsDumb/codex",
     },
     {
+      name: "bible_ml",
+      desc: "Malayalam Bible made with PyQt6.",
+      github: "https://github.com/TheoIsDumb/bible_ml",
+    },
+    {
       name: "launch2",
       desc: "A theme for the Bridge Android Launcher, made with web technologies..",
       github: "https://github.com/TheoIsDumb/launch2",
